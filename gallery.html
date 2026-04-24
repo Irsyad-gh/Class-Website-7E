@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities & Gallery - 7E Enormous</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <img src="assets/img/icons/logo.png" alt="Logo 7E" class="logo-img">
+                <div class="logo-text">
+                    <h1>7E Enormous</h1>
+                    <p>SMPN 1 Subang | 2025-2026</p>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="people.html">Our Team</a></li>
+                    <li><a href="gallery.html" class="active">Activities</a></li>
+                    <li><a href="info.html">Information</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- GALERI SECTION -->
+        <section class="gallery">
+            <div class="container">
+                <h2>Galeri Aktivitas Kelas</h2>
+
+                <!-- Filter Buttons -->
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="class-meetings">Class Meetings</button>
+                    <button class="filter-btn" data-filter="study-tour">Study Tour</button>
+                    <button class="filter-btn" data-filter="daily-life">Daily Life</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid" id="gallery-grid">
+                    <!-- Class Meetings -->
+                    <div class="gallery-item" data-category="class-meetings">
+                        <img src="assets/img/gallery/class-meeting-1.jpg" alt="Class Meeting">
+                        <div class="gallery-overlay">
+                            <h3>Lomba Antar Kelas</h3>
+                            <p>Kompetisi Seru</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="class-meetings">
+                        <img src="assets/img/gallery/class-meeting-2.jpg" alt="Class Meeting">
+                        <div class="gallery-overlay">
+                            <h3>Acara Kelas</h3>
+                            <p>Semangat Bersama</p>
+                        </div>
+                    </div>
+
+                    <!-- Study Tour -->
+                    <div class="gallery-item" data-category="study-tour">
+                        <img src="assets/img/gallery/study-tour-1.jpg" alt="Study Tour">
+                        <div class="gallery-overlay">
+                            <h3>Kunjungan Lapangan</h3>
+                            <p>Belajar Sambil Bertualang</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="study-tour">
+                        <img src="assets/img/gallery/study-tour-2.jpg" alt="Study Tour">
+                        <div class="gallery-overlay">
+                            <h3>Perjalanan Kelas</h3>
+                            <p>Ciptakan Kenangan</p>
+                        </div>
+                    </div>
+
+                    <!-- Daily Life -->
+                    <div class="gallery-item" data-category="daily-life">
+                        <img src="assets/img/gallery/daily-1.jpg" alt="Daily Life">
+                        <div class="gallery-overlay">
+                            <h3>Candid Kelas</h3>
+                            <p>Momen Berharga</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="daily-life">
+                        <img src="assets/img/gallery/daily-2.jpg" alt="Daily Life">
+                        <div class="gallery-overlay">
+                            <h3>Istirahat Seru</h3>
+                            <p>Canda dan Tawa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIDEO SECTION -->
+        <section class="video-section">
+            <div class="container">
+                <h2>Video Dokumentasi</h2>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h3>Dokumentasi Kelas</h3>
+                    </div>
+                    <div class="video-item">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <h3>Highlight Kegiatan</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Made with ❤️ by Team IT 7E</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/7.enormous?igsh=MnJkMG9lbjRobnNk" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank" title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="visitor-counter">
+                <p>Total Visitors: <span id="visitor-count">0</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

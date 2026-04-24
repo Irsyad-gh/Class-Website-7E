@@ -1,0 +1,51 @@
+{
+  "class": {
+    "name": "7",
+    "subtitle": "Enormous",
+    "school": "SMPN 1 Subang / SPENSA Subang",
+    "year": "2025 - 2026",
+    "totalStudents": 43
+  },
+  "theme": {
+    "primaryColor": "#9d4edd",
+    "secondaryColor": "#7209b7",
+    "accentColor": "#f72585",
+    "cyan": "#00f5ff"
+  },
+  "aboutClass": "Kelas 7E adalah kelompok siswa yang luar biasa berisik namun penuh ambisi. Kami adalah keluarga besar yang saling mendukung, memiliki semangat tinggi, dan siap menghadapi setiap tantangan akademik maupun non-akademik dengan penuh kebersamaan.",
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Yosi Suliyoswati",
+      "title": "S.Pd",
+      "position": "Wali Kelas 7E",
+      "quote": "Kesuksesan kalian adalah kebahagiaan saya",
+      "image": "assets/img/teacher/wali-kelas.jpg",
+      "instagram": "#",
+      "facebook": "#"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Nama Siswa 1",
+      "nickname": "Panggilan",
+      "position": "Ketua Kelas",
+      "image": "assets/img/students/student-1.jpg",
+      "birthDate": "15-01-2011",
+      "hobbies": "Membaca, Gaming",
+      "message": "Terima kasih untuk kenangan indah bersama kalian",
+      "trivia": ["Paling sering terlambat", "Fans anime"]
+    }
+  ],
+  "schedule": {
+    "senin": [
+      {
+        "time": "07:00 - 08:15",
+        "subject": "Pendidikan Agama Islam",
+        "teacher": "Bp. Ahmad",
+        "room": "7E"
+      }
+    ]
+  }
+}
