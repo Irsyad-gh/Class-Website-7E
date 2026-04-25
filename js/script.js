@@ -271,13 +271,13 @@
   }
 
   function renderPiket(piket) {
-    const days = ['senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu'];
+    const days = ['senin', 'selasa', 'rabu', 'kamis', 'jumat',];
     for (const day of days) {
       const el = qs(`#piket-${day}`);
       if (!el) continue;
       const names = piket?.[day] || [];
       el.innerHTML = names.length
-        ? names.map(n => `<span class="piket-name">${n}</span>`).join('')
+        ? names.map(n => `<div class="piket-name">${n}</div>`).join('')
         : '<span class="empty">-</span>';
     }
   }
