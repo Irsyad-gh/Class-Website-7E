@@ -959,6 +959,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
+    align-items: stretch;
 }
 
 .piket-day {
@@ -985,6 +986,10 @@ body {
 .piket-day p {
     color: var(--text-light);
     font-weight: 600;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    line-height: 1,6;
 }
 
 /* MBG Table */

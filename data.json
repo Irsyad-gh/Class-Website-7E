@@ -67,8 +67,8 @@
       "pengurusGroup": "kepemimpinan",
       "image": "assets/img/students/student-2.jpg",
       "birthDate": "19-10-2012",
-      "hobbies": "Gaming, Nonton",
-      "message": "Semoga kita selalu kompak!",
+      "hobbies": "Rdr aja",
+      "message": "Panggil aku tuan",
       "trivia": ["Selalu tepat waktu", "Jago basket"]
     },
     {
@@ -147,43 +147,99 @@
 
   "schedule": {
     "senin": [
-      { "time": "07:00 - 08:15", "subject": "Pendidikan Agama Islam", "teacher": "Bp. Ferry",   "room": "7E" },
-      { "time": "08:15 - 09:30", "subject": "Matematika",              "teacher": "Ibu Sari",   "room": "7E" },
-      { "time": "09:45 - 11:00", "subject": "Bahasa Indonesia",        "teacher": "Ibu Dewi",   "room": "7E" },
-      { "time": "11:00 - 12:15", "subject": "IPA",                     "teacher": "Bp. Hendra", "room": "Lab IPA" },
-      { "time": "13:00 - 14:15", "subject": "PJOK",                    "teacher": "Bp. Agus",   "room": "Lapangan" }
+      { "time": "06:30 - 07:30", "subject": "Upacara",                 "teacher": "-",          "room": "Lapangan" },
+      { "time": "07:30 - 08:50", "subject": "IPA",                     "teacher": "Ibu Lita",   "room": "7E" },
+      { "time": "08:50 - 09:30", "subject": "Bahasa Indonesia",        "teacher": "Bp. Thomas", "room": "7E" },
+      { "time": "09:30 - 10:00", "subject": "Istirahat",               "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "10:00 - 10:40", "subject": "Bahasa Indonesia",        "teacher": "Bp. Thomas", "room": "7E" },
+      { "time": "10:40 - 12:00", "subject": "Bahasa Sunda",            "teacher": "Ibu Yuli",   "room": "7E" },
+      { "time": "12:00 - 12:50", "subject": "Soliskan, Kokurikuler",   "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "12:50 - 14:10", "subject": "Matematika",              "teacher": "Ibu Listia", "room": "7E" },
+      { "time": "    14:10    ", "subject": "Kembali kerumah",         "teacher": "-",          "room": "-" }
     ],
     "selasa": [
-      { "time": "07:00 - 08:15", "subject": "Bahasa Inggris",          "teacher": "Ibu Rina",   "room": "7E" },
-      { "time": "08:15 - 09:30", "subject": "IPS",                     "teacher": "Ibu Yanti",  "room": "7E" },
-      { "time": "09:45 - 11:00", "subject": "Seni Budaya",             "teacher": "Ibu Leni",   "room": "7E" },
-      { "time": "11:00 - 12:15", "subject": "PKn",                     "teacher": "Bp. Dodi",   "room": "7E" }
+      { "time": "06:30 - 08:50", "subject": "Olahraga",                "teacher": "Bp. Cikal",  "room": "Lapangan" },
+      { "time": "08:50 - 09:30", "subject": "Ipa",                     "teacher": "Ibu Lita",   "room": "7E" },
+      { "time": "09:30 - 10:00", "subject": "Istirahat",               "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "10:00 - 11:20", "subject": "IPA",                     "teacher": "Ibu Lita",   "room": "7E" },
+      { "time": "11:20 - 12:00", "subject": "PPKN",                    "teacher": "Bp. Rakhman","room": "7E" },
+      { "time": "12:00 - 12:50", "subject": "Soliskan, Kokurikuler",   "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "12:50 - 14:10", "subject": "PPKN",                    "teacher": "Bp. Rakhman","room": "7E" },
+      { "time": "    14:10    ", "subject": "Kembali kerumah",         "teacher": "-",          "room": "-" }
     ],
     "rabu": [
-      { "time": "07:00 - 08:15", "subject": "Matematika",              "teacher": "Ibu Sari",   "room": "7E" },
-      { "time": "08:15 - 09:30", "subject": "Bahasa Indonesia",        "teacher": "Ibu Dewi",   "room": "7E" },
-      { "time": "09:45 - 11:00", "subject": "IPA",                     "teacher": "Bp. Hendra", "room": "Lab IPA" },
-      { "time": "11:00 - 12:15", "subject": "Prakarya",                "teacher": "Ibu Neni",   "room": "7E" }
+      { "time": "06:30 - 08:10", "subject": "Bahasa Indonesia",        "teacher": "Bp. Thomas", "room": "7E" },
+      { "time": "08:10 - 09:30", "subject": "Bahasa Inggris",          "teacher": "Ibu Yosi",   "room": "7E" },
+      { "time": "09:30 - 10:00", "subject": "Istirahat",               "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "10:00 - 10:40", "subject": "IPS",                     "teacher": "Ibu Meli",   "room": "7E" },
+      { "time": "11:00 - 12:00", "subject": "Kesenian",                "teacher": "Ibu Ressa",  "room": "7E / Perpustakaan" },
+      { "time": "12:00 - 12:50", "subject": "Soliskan, Kokurikuler",   "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "12:50 - 14:10", "subject": "Kesenian",                "teacher": "Ibu Ressa",  "room": "7E / Perpustakaan" },
+      { "time": "    14:10    ", "subject": "Kembali kerumah",         "teacher": "-",          "room": "-" }
     ],
     "kamis": [
-      { "time": "07:00 - 08:15", "subject": "Bahasa Indonesia",        "teacher": "Ibu Dewi",   "room": "7E" },
-      { "time": "08:15 - 09:30", "subject": "IPS",                     "teacher": "Ibu Yanti",  "room": "7E" },
-      { "time": "09:45 - 11:00", "subject": "Bahasa Inggris",          "teacher": "Ibu Rina",   "room": "7E" },
-      { "time": "11:00 - 12:15", "subject": "Matematika",              "teacher": "Ibu Sari",   "room": "7E" }
+      { "time": "06:30 - 08:10", "subject": "IPS",                     "teacher": "Ibu Meli",   "room": "7E" },
+      { "time": "08:10 - 09:30", "subject": "Bahasa Indonesia",        "teacher": "Bp. Thomas", "room": "7E" },
+      { "time": "09:30 - 10:00", "subject": "Istirahat",               "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "10:00 - 10:40", "subject": "Bahasa Inggris",          "teacher": "Ibu Yosi",   "room": "7E" },
+      { "time": "10:40 - 12:00", "subject": "Informatika",             "teacher": "Bp. Nicky",  "room": "7E / Lab Komputer" },
+      { "time": "12:00 - 12:50", "subject": "Soliskan, Kokurikuler",   "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "12:50 - 14:10", "subject": "Informatika",             "teacher": "Bp. Nicky",  "room": "7E / Lab Komputer" },
+      { "time": "    14:10    ", "subject": "Kembali kerumah",         "teacher": "-",          "room": "-" }
     ],
     "jumat": [
-      { "time": "07:00 - 08:00", "subject": "Imtaq / Jumat Pagi",      "teacher": "-",           "room": "Aula" },
-      { "time": "08:00 - 09:15", "subject": "PKn",                     "teacher": "Bp. Dodi",   "room": "7E" },
-      { "time": "09:30 - 10:45", "subject": "Seni Budaya",             "teacher": "Ibu Leni",   "room": "7E" }
+      { "time": "06:30 - 08:30", "subject": "Matematika",                      "teacher": "Ibu Listia", "room": "Aula" },
+      { "time": "08:30 - 09:10", "subject": "Bimbingan Konseling",             "teacher": "Bp. Nicky",  "room": "7E" },
+      { "time": "09:10 - 09:40", "subject": "Istirahat",                       "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "09:40 - 11:40", "subject": "PAI",                             "teacher": "Ibu Neneng", "room": "7E" },
+      { "time": "11:40 - 13:00", "subject": "Sholat Jumat, makan",             "teacher": "-",          "room": "Aula / Lingkungan Sekolah" },
+      { "time": "13:00 - 14:30", "subject": "Kembali kerumah / pramuka wajib", "teacher": "-",          "room": "Lapangan" }
     ]
   },
 
   "piket": {
-    "senin":  ["Nama Siswa A", "Nama Siswa B", "Nama Siswa C"],
-    "selasa": ["Nama Siswa D", "Nama Siswa E", "Nama Siswa F"],
-    "rabu":   ["Nama Siswa G", "Nama Siswa H", "Nama Siswa I"],
-    "kamis":  ["Nama Siswa J", "Nama Siswa K", "Nama Siswa L"],
-    "jumat":  ["Nama Siswa M", "Nama Siswa N"]
+    "senin":  [" Kayla", 
+               " Rehan", 
+               " Rafha", 
+               " Kenzie", 
+               " Syahrul", 
+               " Azzahra", 
+               " Alvin", 
+               " Ibnu", 
+               " Altaf"],
+    "selasa": [" Rasyad", 
+               " Irsyad",
+               " Debby", 
+               " Farrel", 
+               " Silva", 
+               " Cinta", 
+               " Sucira", 
+               " Fernando",
+               " Rajendra"],
+    "rabu":   [" Failsya", 
+               " Panji", 
+               " Felicia", 
+               " Naeema", 
+               " Arfandi", 
+               " Adhyas", 
+               " Faaiz", 
+               " Rahma"],
+    "kamis":  [" Mikayla", 
+               " Sakila",  
+               " Amira", 
+               " Sultan", 
+               " Jesica", 
+               " Azzam", 
+               " Cherryl", 
+               " Rafka"],
+    "jumat":  [" Ligar",  
+               " Alika",  
+               " Aida", 
+               " Ryan", 
+               " Feysha", 
+               " Haura", 
+               " Nadia", 
+               " Qibti"]
   },
 
   "mbg": [
