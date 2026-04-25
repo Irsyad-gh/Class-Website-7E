@@ -1,0 +1,302 @@
+{
+  "class": {
+    "name": "7E",
+    "subtitle": "Enormous",
+    "school": "SMP Negeri 1 Subang",
+    "schoolShort": "SMPN 1 Subang",
+    "year": "2025 - 2026",
+    "totalStudents": 43
+  },
+  "theme": {
+    "primaryColor": "#9d4edd",
+    "secondaryColor": "#7209b7",
+    "accentColor": "#f72585",
+    "cyan": "#00f5ff"
+  },
+  "aboutClass": "Kelas 7E adalah kelompok siswa yang luar biasa berisik namun penuh ambisi. Kami adalah keluarga besar yang saling mendukung, memiliki semangat tinggi, dan siap menghadapi setiap tantangan akademik maupun non-akademik dengan penuh kebersamaan.",
+  "logo": "assets/img/icons/logo.jpg",
+  "heroImage": "assets/img/class-cinematic.jpeg",
+
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Yosi Suliyoswati",
+      "title": "S.Pd",
+      "position": "Wali Kelas 7E",
+      "quote": "Kesuksesan kalian adalah kebahagiaan saya",
+      "image": "assets/img/teacher/wali-kelas.jpg",
+      "instagram": "#",
+      "facebook": "#"
+    }
+  ],
+
+  "pengurusGroups": [
+    { "id": "kepemimpinan", "title": "Kepemimpinan" },
+    { "id": "sekretaris",   "title": "Sekretaris" },
+    { "id": "bendahara",    "title": "Bendahara" },
+    { "id": "absensi",      "title": "Seksi Absensi" },
+    { "id": "kurikulum",    "title": "Seksi Kurikulum" },
+    { "id": "keamanan",     "title": "Seksi Keamanan" },
+    { "id": "agama",        "title": "Seksi Agama" },
+    { "id": "perpustakaan", "title": "Seksi Perpustakaan" },
+    { "id": "kesenian",     "title": "Seksi Kesenian" },
+    { "id": "olahraga",     "title": "Seksi Olahraga" },
+    { "id": "upacara",      "title": "Seksi Upacara" },
+    { "id": "pmr",          "title": "PMR" },
+    { "id": "pramuka",      "title": "Pramuka" }
+  ],
+
+  "students": [
+    {
+      "id": 1,
+      "name": "Irsyad Dzaky Nurghany",
+      "nickname": "Irsyad",
+      "position": "Ketua Kelas",
+      "pengurusGroup": "kepemimpinan",
+      "image": "assets/img/students/student-1.jpg",
+      "birthDate": "17-10-2012",
+      "hobbies": "Membaca, Ngodng",
+      "message": "Terima kasih untuk kenangan indah bersama kalian",
+      "trivia": ["Paling sering terlambat", "Nerdy"]
+    },
+    {
+      "id": 2,
+      "name": "Rasyad Gibran Anandi",
+      "nickname": "Acad",
+      "position": "Wakil Ketua Kelas",
+      "pengurusGroup": "kepemimpinan",
+      "image": "assets/img/students/student-2.jpg",
+      "birthDate": "19-10-2012",
+      "hobbies": "Rdr aja",
+      "message": "Panggil aku tuan",
+      "trivia": ["Selalu tepat waktu", "Jago basket"]
+    },
+    {
+      "id": 3,
+      "name": "Nama Siswa 3",
+      "nickname": "Panggilan",
+      "position": "Sekretaris 1",
+      "pengurusGroup": "sekretaris",
+      "image": "assets/img/students/student-3.jpg",
+      "birthDate": "05-07-2011",
+      "hobbies": "Menulis, Menggambar",
+      "message": "Kenangan bersama kalian tak terlupakan",
+      "trivia": ["Tulisan paling rapi", "Suka kucing"]
+    },
+    {
+      "id": 4,
+      "name": "Nama Siswa 4",
+      "nickname": "Panggilan",
+      "position": "Sekretaris 2",
+      "pengurusGroup": "sekretaris",
+      "image": "assets/img/students/student-4.jpg",
+      "birthDate": "12-09-2011",
+      "hobbies": "Membaca, Memasak",
+      "message": "Bangga jadi bagian dari 7E!",
+      "trivia": ["Paling rajin mencatat", "Suka memasak"]
+    },
+    {
+      "id": 5,
+      "name": "Nama Siswa 5",
+      "nickname": "Panggilan",
+      "position": "Bendahara 1",
+      "pengurusGroup": "bendahara",
+      "image": "assets/img/students/student-5.jpg",
+      "birthDate": "28-11-2010",
+      "hobbies": "Menghitung, Coding",
+      "message": "Jaga selalu kekompakan kelas kita",
+      "trivia": ["Paling irit jajan", "Suka matematika"]
+    },
+    {
+      "id": 6,
+      "name": "Nama Siswa 6",
+      "nickname": "Panggilan",
+      "position": "Bendahara 2",
+      "pengurusGroup": "bendahara",
+      "image": "assets/img/students/student-6.jpg",
+      "birthDate": "03-02-2011",
+      "hobbies": "Belanja, Memasak",
+      "message": "Terimakasih 7E atas semua kenangannya!",
+      "trivia": ["Jago ngitung uang", "Selalu bawa cemilan"]
+    },
+    {
+      "id": 7,
+      "name": "Nama Siswa 7",
+      "nickname": "Panggilan",
+      "position": "Seksi Absensi",
+      "pengurusGroup": "absensi",
+      "image": "assets/img/students/student-7.jpg",
+      "birthDate": "17-04-2011",
+      "hobbies": "Gaming, Nonton",
+      "message": "7E selamanya di hati!",
+      "trivia": ["Paling tahu siapa yang bolos", "Fans K-pop"]
+    },
+    {
+      "id": 8,
+      "name": "Nama Siswa 8",
+      "nickname": "Panggilan",
+      "position": "Seksi Absensi",
+      "pengurusGroup": "absensi",
+      "image": "assets/img/students/student-8.jpg",
+      "birthDate": "22-06-2011",
+      "hobbies": "Musik, Melukis",
+      "message": "Semoga kita selalu sukses!",
+      "trivia": ["Hafal nama semua teman", "Suka warna biru"]
+    }
+  ],
+
+  "schedule": {
+    "senin": [
+      { "time": "06:30 - 07:30", "subject": "Upacara",                 "teacher": "-",          "room": "Lapangan" },
+      { "time": "07:30 - 08:50", "subject": "IPA",                     "teacher": "Ibu Lita",   "room": "7E" },
+      { "time": "08:50 - 09:30", "subject": "Bahasa Indonesia",        "teacher": "Bp. Thomas", "room": "7E" },
+      { "time": "09:30 - 10:00", "subject": "Istirahat",               "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "10:00 - 10:40", "subject": "Bahasa Indonesia",        "teacher": "Bp. Thomas", "room": "7E" },
+      { "time": "10:40 - 12:00", "subject": "Bahasa Sunda",            "teacher": "Ibu Yuli",   "room": "7E" },
+      { "time": "12:00 - 12:50", "subject": "Soliskan, Kokurikuler",   "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "12:50 - 14:10", "subject": "Matematika",              "teacher": "Ibu Listia", "room": "7E" },
+      { "time": "    14:10    ", "subject": "Kembali kerumah",         "teacher": "-",          "room": "-" }
+    ],
+    "selasa": [
+      { "time": "06:30 - 08:50", "subject": "Olahraga",                "teacher": "Bp. Cikal",  "room": "Lapangan" },
+      { "time": "08:50 - 09:30", "subject": "Ipa",                     "teacher": "Ibu Lita",   "room": "7E" },
+      { "time": "09:30 - 10:00", "subject": "Istirahat",               "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "10:00 - 11:20", "subject": "IPA",                     "teacher": "Ibu Lita",   "room": "7E" },
+      { "time": "11:20 - 12:00", "subject": "PPKN",                    "teacher": "Bp. Rakhman","room": "7E" },
+      { "time": "12:00 - 12:50", "subject": "Soliskan, Kokurikuler",   "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "12:50 - 14:10", "subject": "PPKN",                    "teacher": "Bp. Rakhman","room": "7E" },
+      { "time": "    14:10    ", "subject": "Kembali kerumah",         "teacher": "-",          "room": "-" }
+    ],
+    "rabu": [
+      { "time": "06:30 - 08:10", "subject": "Bahasa Indonesia",        "teacher": "Bp. Thomas", "room": "7E" },
+      { "time": "08:10 - 09:30", "subject": "Bahasa Inggris",          "teacher": "Ibu Yosi",   "room": "7E" },
+      { "time": "09:30 - 10:00", "subject": "Istirahat",               "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "10:00 - 10:40", "subject": "IPS",                     "teacher": "Ibu Meli",   "room": "7E" },
+      { "time": "11:00 - 12:00", "subject": "Kesenian",                "teacher": "Ibu Ressa",  "room": "7E / Perpustakaan" },
+      { "time": "12:00 - 12:50", "subject": "Soliskan, Kokurikuler",   "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "12:50 - 14:10", "subject": "Kesenian",                "teacher": "Ibu Ressa",  "room": "7E / Perpustakaan" },
+      { "time": "    14:10    ", "subject": "Kembali kerumah",         "teacher": "-",          "room": "-" }
+    ],
+    "kamis": [
+      { "time": "06:30 - 08:10", "subject": "IPS",                     "teacher": "Ibu Meli",   "room": "7E" },
+      { "time": "08:10 - 09:30", "subject": "Bahasa Indonesia",        "teacher": "Bp. Thomas", "room": "7E" },
+      { "time": "09:30 - 10:00", "subject": "Istirahat",               "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "10:00 - 10:40", "subject": "Bahasa Inggris",          "teacher": "Ibu Yosi",   "room": "7E" },
+      { "time": "10:40 - 12:00", "subject": "Informatika",             "teacher": "Bp. Nicky",  "room": "7E / Lab Komputer" },
+      { "time": "12:00 - 12:50", "subject": "Soliskan, Kokurikuler",   "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "12:50 - 14:10", "subject": "Informatika",             "teacher": "Bp. Nicky",  "room": "7E / Lab Komputer" },
+      { "time": "    14:10    ", "subject": "Kembali kerumah",         "teacher": "-",          "room": "-" }
+    ],
+    "jumat": [
+      { "time": "06:30 - 08:30", "subject": "Matematika",                      "teacher": "Ibu Listia", "room": "Aula" },
+      { "time": "08:30 - 09:10", "subject": "Bimbingan Konseling",             "teacher": "Bp. Nicky",  "room": "7E" },
+      { "time": "09:10 - 09:40", "subject": "Istirahat",                       "teacher": "-",          "room": "Lingkungan Sekolah" },
+      { "time": "09:40 - 11:40", "subject": "PAI",                             "teacher": "Ibu Neneng", "room": "7E" },
+      { "time": "11:40 - 13:00", "subject": "Sholat Jumat, makan",             "teacher": "-",          "room": "Aula / Lingkungan Sekolah" },
+      { "time": "13:00 - 14:30", "subject": "Kembali kerumah / pramuka wajib", "teacher": "-",          "room": "Lapangan" }
+    ]
+  },
+
+  "piket": {
+    "senin":  [" Kayla", 
+               " Rehan", 
+               " Rafha", 
+               " Kenzie", 
+               " Syahrul", 
+               " Azzahra", 
+               " Alvin", 
+               " Ibnu", 
+               " Altaf"],
+    "selasa": [" Rasyad", 
+               " Irsyad",
+               " Debby", 
+               " Farrel", 
+               " Silva", 
+               " Cinta", 
+               " Sucira", 
+               " Fernando",
+               " Rajendra"],
+    "rabu":   [" Failsya", 
+               " Panji", 
+               " Felicia", 
+               " Naeema", 
+               " Arfandi", 
+               " Adhyas", 
+               " Faaiz", 
+               " Rahma"],
+    "kamis":  [" Mikayla", 
+               " Sakila",  
+               " Amira", 
+               " Sultan", 
+               " Jesica", 
+               " Azzam", 
+               " Cherryl", 
+               " Rafka"],
+    "jumat":  [" Ligar",  
+               " Alika",  
+               " Aida", 
+               " Ryan", 
+               " Feysha", 
+               " Haura", 
+               " Nadia", 
+               " Qibti"]
+  },
+
+  "mbg": [
+    { "day": "Senin",  "petugas": ["Nama Siswa A", "Nama Siswa B"], "time": "11.30" },
+    { "day": "Selasa", "petugas": ["Nama Siswa C", "Nama Siswa D"], "time": "11.30" },
+    { "day": "Rabu",   "petugas": ["Nama Siswa E", "Nama Siswa F"], "time": "11.30" },
+    { "day": "Kamis",  "petugas": ["Nama Siswa G", "Nama Siswa H"], "time": "11.30" },
+    { "day": "Jumat",  "petugas": ["Nama Siswa I", "Nama Siswa J"], "time": "11.00" }
+  ],
+
+  "gallery": [
+    {
+      "image": "assets/img/gallery/class-meeting-1.jpg",
+      "category": "class-meetings",
+      "title": "Lomba Antar Kelas",
+      "description": "Kompetisi Seru"
+    },
+    {
+      "image": "assets/img/gallery/class-meeting-2.jpg",
+      "category": "class-meetings",
+      "title": "Acara Kelas",
+      "description": "Semangat Bersama"
+    },
+    {
+      "image": "assets/img/gallery/study-tour-1.jpg",
+      "category": "study-tour",
+      "title": "Kunjungan Lapangan",
+      "description": "Belajar Sambil Bertualang"
+    },
+    {
+      "image": "assets/img/gallery/study-tour-2.jpg",
+      "category": "study-tour",
+      "title": "Perjalanan Kelas",
+      "description": "Ciptakan Kenangan"
+    },
+    {
+      "image": "assets/img/gallery/daily-1.jpg",
+      "category": "daily-life",
+      "title": "Candid Kelas",
+      "description": "Momen Berharga"
+    },
+    {
+      "image": "assets/img/gallery/daily-2.jpg",
+      "category": "daily-life",
+      "title": "Istirahat Seru",
+      "description": "Canda dan Tawa"
+    }
+  ],
+
+  "footer": {
+    "copyright": "2026",
+    "team": "Team IT 7E",
+    "instagram": "https://www.instagram.com/7.enormous?igsh=MnJkMG9lbjRobnNk",
+    "tiktok": "#"
+  },
+
+  "events": [
+    { "name": "Ujian Akhir Semester", "date": "2026-06-15" }
+  ]
+}

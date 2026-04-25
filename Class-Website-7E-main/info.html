@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information - 7E Enormous</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="navbar-container">
+    <div class="logo">
+      <img src="" alt="" class="logo-img">
+      <div class="logo-text">
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html">Our Team</a></li>
+        <li><a href="gallery.html">Activities</a></li>
+        <li><a href="info.html" class="active">Information</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- JADWAL PELAJARAN -->
+  <section class="info-section">
+    <div class="container">
+      <h2>Jadwal Pelajaran</h2>
+      <div class="schedule-container">
+        <div class="day-tabs">
+          <button class="day-btn active" data-day="senin">Senin</button>
+          <button class="day-btn"        data-day="selasa">Selasa</button>
+          <button class="day-btn"        data-day="rabu">Rabu</button>
+          <button class="day-btn"        data-day="kamis">Kamis</button>
+          <button class="day-btn"        data-day="jumat">Jumat</button>
+        </div>
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Jam</th>
+              <th>Pelajaran</th>
+              <th>Guru</th>
+              <th>Ruangan</th>
+            </tr>
+          </thead>
+          <tbody id="schedule-body"><!-- JS --></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- JADWAL PIKET — nama-nama diinjeksi JS dari data.piket -->
+  <section class="info-section">
+    <div class="container">
+      <h2>Jadwal Piket Kelas</h2>
+      <div class="piket-grid">
+        <div class="piket-day"><h3>Senin</h3>   <p id="piket-senin"></p></div>
+        <div class="piket-day"><h3>Selasa</h3>  <p id="piket-selasa"></p></div>
+        <div class="piket-day"><h3>Rabu</h3>    <p id="piket-rabu"></p></div>
+        <div class="piket-day"><h3>Kamis</h3>   <p id="piket-kamis"></p></div>
+        <div class="piket-day"><h3>Jumat</h3>   <p id="piket-jumat"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JADWAL PIKET MBG — baris tabel diinjeksi JS dari data.mbg -->
+  <section class="info-section">
+    <div class="container">
+      <h2>Jadwal Piket Pengambilan MBG</h2>
+      <table class="mbg-table">
+        <thead>
+          <tr>
+            <th>Hari</th>
+            <th>Nama Piket</th>
+            <th>Waktu</th>
+          </tr>
+        </thead>
+        <tbody id="mbg-body"><!-- JS --></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ULANG TAHUN — kartu diinjeksi JS dari data.students[].birthDate -->
+  <section class="info-section">
+    <div class="container">
+      <h2>Ulang Tahun Bulan Ini</h2>
+      <div class="birthday-container">
+        <div class="month-selector">
+          <button id="prev-month" class="month-btn">← Bulan Lalu</button>
+          <h3 id="current-month"></h3>
+          <button id="next-month" class="month-btn">Bulan Depan →</button>
+        </div>
+        <div class="birthday-grid" id="birthday-grid"><!-- JS --></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <p><!-- JS --></p>
+      <div class="social-links">
+        <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="visitor-counter">
+      <p>Total Visitors: <span id="visitor-count">0</span></p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
