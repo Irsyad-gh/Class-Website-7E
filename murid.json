@@ -1,215 +1,329 @@
 {
-    "students": [
-        {
-            "no": 1,
-            "name": "ABDURRAHMAN ALTHAF AL AMIR",
-            "gender": "L"
-        },
-        {
-            "no": 2,
-            "name": "AIDA RAHMAWATI",
-            "gender": "P"
-        },
-        {
-            "no": 3,
-            "name": "ALIKA SALSABILA ABDULAH",
-            "gender": "P"
-        },
-        {
-            "no": 4,
-            "name": "ALVIN ALVARO",
-            "gender": "L"
-        },
-        {
-            "no": 5,
-            "name": "ARFANDI ALIEF RAMADHAN",
-            "gender": "L"
-        },
-        {
-            "no": 6,
-            "name": "AZAM KHAIRUL IKHWAN",
-            "gender": "L"
-        },
-        {
-            "no": 7,
-            "name": "AZZAHRA SIDQIA RAMADHANI",
-            "gender": "P"
-        },
-        {
-            "no": 8,
-            "name": "CHERRYL HERMIRA JASMINE",
-            "gender": "P"
-        },
-        {
-            "no": 9,
-            "name": "CINTA TANIA APRILIANI",
-            "gender": "P"
-        },
-        {
-            "no": 10,
-            "name": "DEBY ADZIANE JANUR NASUTION",
-            "gender": "P"
-        },
-        {
-            "no": 11,
-            "name": "FAAIZ FAIZAN ACHMAD",
-            "gender": "L"
-        },
-        {
-            "no": 12,
-            "name": "FAILSYA NURFAJRI RAMADHANI",
-            "gender": "P"
-        },
-        {
-            "no": 13,
-            "name": "FARREL AZKA RADITYA",
-            "gender": "L"
-        },
-        {
-            "no": 14,
-            "name": "FELICIA CLARISTA SETIAWAN",
-            "gender": "P"
-        },
-        {
-            "no": 15,
-            "name": "FERNANDO JUSTIN",
-            "gender": "L"
-        },
-        {
-            "no": 16,
-            "name": "FEYSHA ZAQIYATUZAHRA",
-            "gender": "P"
-        },
-        {
-            "no": 17,
-            "name": "HAURA ZAUZIA SONIA",
-            "gender": "P"
-        },
-        {
-            "no": 18,
-            "name": "IBNU APANDI",
-            "gender": "L"
-        },
-        {
-            "no": 19,
-            "name": "IRSYAD DZAKY NURGHANY",
-            "gender": "L"
-        },
-        {
-            "no": 20,
-            "name": "JESICA CLAUDIA",
-            "gender": "P"
-        },
-        {
-            "no": 21,
-            "name": "KAYLA RAHMA AULIA",
-            "gender": "P"
-        },
-        {
-            "no": 22,
-            "name": "KENZIE FAZRIL RAHARDI",
-            "gender": "L"
-        },
-        {
-            "no": 23,
-            "name": "MIKAYLA AKHFA AGHNIYASARI",
-            "gender": "P"
-        },
-        {
-            "no": 24,
-            "name": "NADIA SHOFI FATHINAH",
-            "gender": "P"
-        },
-        {
-            "no": 25,
-            "name": "PANJI INDRA LIESIANTO",
-            "gender": "L"
-        },
-        {
-            "no": 26,
-            "name": "PUTRI AMIRA ABDURACHMAN",
-            "gender": "P"
-        },
-        {
-            "no": 27,
-            "name": "R. ADHYAS FAEYZA HENDRA",
-            "gender": "L"
-        },
-        {
-            "no": 28,
-            "name": "RAFHA PRATAMA",
-            "gender": "L"
-        },
-        {
-            "no": 29,
-            "name": "RAFKA RACERIO GENTARA",
-            "gender": "L"
-        },
-        {
-            "no": 30,
-            "name": "RAHMA KHOSYAH FITRIE",
-            "gender": "P"
-        },
-        {
-            "no": 31,
-            "name": "RAIHAN ALFARISI ALHADAR",
-            "gender": "L"
-        },
-        {
-            "no": 32,
-            "name": "RAJENDRA SUDAMA",
-            "gender": "L"
-        },
-        {
-            "no": 33,
-            "name": "RASYAD GIBRAN ANANDI",
-            "gender": "L"
-        },
-        {
-            "no": 34,
-            "name": "RD LIGAR KHALIFAH RAMSYAH",
-            "gender": "P"
-        },
-        {
-            "no": 35,
-            "name": "RIZKYA NAEEMA AQILA",
-            "gender": "P"
-        },
-        {
-            "no": 36,
-            "name": "RYAN DAMAR MULYADI PRATAMA",
-            "gender": "L"
-        },
-        {
-            "no": 37,
-            "name": "SAKILA ALEANUR MAURA TAUFIK",
-            "gender": "P"
-        },
-        {
-            "no": 38,
-            "name": "SILVA MASMARA",
-            "gender": "P"
-        },
-        {
-            "no": 39,
-            "name": "SUCIRA MOJANG DWIPA",
-            "gender": "P"
-        },
-        {
-            "no": 40,
-            "name": "SULTAN MAOLANA SIDIK",
-            "gender": "L"
-        },
-        {
-            "no": 41,
-            "name": "SYAHRUL NUGRAHA",
-            "gender": "L"
-        },
-
-        {
-            "no": 42,
-            "name": "QIBTI DHOFWATUL AISY",
-            "gender": "P"
-        }
-    ]
+  "class": "VII E",
+  "year": 2025,
+  "totalStudents": 41,
+  "organization": {
+    "ketua": {
+      "nama": "Irsyad Dzaky Nurghany",
+      "gender": "L"
+    },
+    "wakilKetua": {
+      "nama": "Rasyad Gibran Anandi",
+      "gender": "L"
+    },
+    "sekretaris": [
+      {
+        "posisi": "Sekretaris 1",
+        "nama": "Putri Amira Abdurachman",
+        "gender": "P"
+      },
+      {
+        "posisi": "Sekretaris 2",
+        "nama": "R. Adhyas Faeyza Hendra",
+        "gender": "L"
+      }
+    ],
+    "bendahara": [
+      {
+        "posisi": "Bendahara 1",
+        "nama": "Feysha Zaqiyatuzahra",
+        "gender": "P"
+      },
+      {
+        "posisi": "Bendahara 2",
+        "nama": "RD Ligar Khalifah Ramsyah",
+        "gender": "P"
+      }
+    ],
+    "seksi": {
+      "absensi": [
+        "Farrel Azka Raditya",
+        "Haura Zauzia Sonia"
+      ],
+      "kurikulum": [
+        "Sakila Aleanur Maura Taufik",
+        "Kenzie Fazril Rahardi"
+      ],
+      "keamanan": [
+        "Cinta Tania Apriliani",
+        "Sultan Maolana Sidik"
+      ],
+      "agama": [
+        "Faaiz Faizan Achmad",
+        "Sucira Mojang Dwipa"
+      ],
+      "perpustakaan": [
+        "Azam Khairul Ikhwan",
+        "Silva Masmara"
+      ],
+      "kesenian": [
+        "Jesica Claudia",
+        "Rafka Racerio Gentara"
+      ],
+      "olahraga": [
+        "Arfandi Alief Ramadhan",
+        "Alika Salsabila Abdulah"
+      ],
+      "upacara": [
+        "Aida Rahmawati",
+        "Fernando Justin"
+      ],
+      "pmr": [
+        "Ryan Damar Mulyadi Pratama",
+        "Rahma Khosyah Fitrie"
+      ],
+      "pramuka": [
+        "Abdurrahman Althaf Al Amir",
+        "Felicia Clarista Setiawan"
+      ]
+    }
+  },
+  "students": [
+    {
+      "no": 1,
+      "nama": "Abdurrahman Althaf Al Amir",
+      "gender": "L",
+      "posisiOrganisasi": "Pramuka"
+    },
+    {
+      "no": 2,
+      "nama": "Aida Rahmawati",
+      "gender": "P",
+      "posisiOrganisasi": "Upacara"
+    },
+    {
+      "no": 3,
+      "nama": "Alika Salsabila Abdulah",
+      "gender": "P",
+      "posisiOrganisasi": "Olahraga"
+    },
+    {
+      "no": 4,
+      "nama": "Alvin Alvaro",
+      "gender": "P",
+      "posisiOrganisasi": null
+    },
+    {
+      "no": 5,
+      "nama": "Arfandi Alief Ramadhan",
+      "gender": "L",
+      "posisiOrganisasi": "Olahraga"
+    },
+    {
+      "no": 6,
+      "nama": "Azam Khairul Ikhwan",
+      "gender": "L",
+      "posisiOrganisasi": "Perpustakaan"
+    },
+    {
+      "no": 7,
+      "nama": "Azzahra Sidqia Ramadhani",
+      "gender": "P",
+      "posisiOrganisasi": null
+    },
+    {
+      "no": 8,
+      "nama": "Cherryl Hermira Jasmine",
+      "gender": "P",
+      "posisiOrganisasi": null
+    },
+    {
+      "no": 9,
+      "nama": "Cinta Tania Apriliani",
+      "gender": "P",
+      "posisiOrganisasi": "Keamanan"
+    },
+    {
+      "no": 10,
+      "nama": "Deby Adziane Janur Nasution",
+      "gender": "P",
+      "posisiOrganisasi": null
+    },
+    {
+      "no": 11,
+      "nama": "Faaiz Faizan Achmad",
+      "gender": "L",
+      "posisiOrganisasi": "Agama"
+    },
+    {
+      "no": 12,
+      "nama": "Failsya Nurfajri Ramadhani",
+      "gender": "P",
+      "posisiOrganisasi": null
+    },
+    {
+      "no": 13,
+      "nama": "Farrel Azka Raditya",
+      "gender": "L",
+      "posisiOrganisasi": "Absensi"
+    },
+    {
+      "no": 14,
+      "nama": "Felicia Clarista Setiawan",
+      "gender": "P",
+      "posisiOrganisasi": "Pramuka"
+    },
+    {
+      "no": 15,
+      "nama": "Fernando Justin",
+      "gender": "L",
+      "posisiOrganisasi": "Upacara"
+    },
+    {
+      "no": 16,
+      "nama": "Feysha Zaqiyatuzahra",
+      "gender": "P",
+      "posisiOrganisasi": "Bendahara 1"
+    },
+    {
+      "no": 17,
+      "nama": "Haura Zauzia Sonia",
+      "gender": "P",
+      "posisiOrganisasi": "Absensi"
+    },
+    {
+      "no": 18,
+      "nama": "Ibnu Apandi",
+      "gender": "L",
+      "posisiOrganisasi": null
+    },
+    {
+      "no": 19,
+      "nama": "Irsyad Dzaky Nurghany",
+      "gender": "L",
+      "posisiOrganisasi": "Ketua"
+    },
+    {
+      "no": 20,
+      "nama": "Jesica Claudia",
+      "gender": "P",
+      "posisiOrganisasi": "Kesenian"
+    },
+    {
+      "no": 21,
+      "nama": "Kayla Rahma Aulia",
+      "gender": "P",
+      "posisiOrganisasi": null
+    },
+    {
+      "no": 22,
+      "nama": "Kenzie Fazril Rahardi",
+      "gender": "L",
+      "posisiOrganisasi": "Kurikulum"
+    },
+    {
+      "no": 23,
+      "nama": "Mikayla Akhfa Aghniyasari",
+      "gender": "P",
+      "posisiOrganisasi": null
+    },
+    {
+      "no": 24,
+      "nama": "Nadia Shofi Fathinah",
+      "gender": "P",
+      "posisiOrganisasi": null
+    },
+    {
+      "no": 25,
+      "nama": "Panji Indra Lesianto",
+      "gender": "L",
+      "posisiOrganisasi": null
+    },
+    {
+      "no": 26,
+      "nama": "Putri Amira Abdurachman",
+      "gender": "P",
+      "posisiOrganisasi": "Sekretaris 1"
+    },
+    {
+      "no": 27,
+      "nama": "R. Adhyas Faeyza Hendra",
+      "gender": "L",
+      "posisiOrganisasi": "Sekretaris 2"
+    },
+    {
+      "no": 28,
+      "nama": "Rafha Pratama",
+      "gender": "L",
+      "posisiOrganisasi": null
+    },
+    {
+      "no": 29,
+      "nama": "Rafka Racerio Gentara",
+      "gender": "L",
+      "posisiOrganisasi": "Kesenian"
+    },
+    {
+      "no": 30,
+      "nama": "Rahma Khosyah Fitrie",
+      "gender": "P",
+      "posisiOrganisasi": "PMR"
+    },
+    {
+      "no": 31,
+      "nama": "Raihan Alfarisi Alhadar",
+      "gender": "L",
+      "posisiOrganisasi": null
+    },
+    {
+      "no": 32,
+      "nama": "Rajendra Sudama",
+      "gender": "L",
+      "posisiOrganisasi": null
+    },
+    {
+      "no": 33,
+      "nama": "Rasyad Gibran Anandi",
+      "gender": "L",
+      "posisiOrganisasi": "Wakil Ketua"
+    },
+    {
+      "no": 34,
+      "nama": "RD Ligar Khalifah Ramsyah",
+      "gender": "P",
+      "posisiOrganisasi": "Bendahara 2"
+    },
+    {
+      "no": 35,
+      "nama": "Rizkya Naeema Aqila",
+      "gender": "P",
+      "posisiOrganisasi": null
+    },
+    {
+      "no": 36,
+      "nama": "Ryan Damar Mulyadi Pratama",
+      "gender": "L",
+      "posisiOrganisasi": "PMR"
+    },
+    {
+      "no": 37,
+      "nama": "Sakila Aleanur Maura Taufik",
+      "gender": "P",
+      "posisiOrganisasi": "Kurikulum"
+    },
+    {
+      "no": 38,
+      "nama": "Silva Masmara",
+      "gender": "P",
+      "posisiOrganisasi": "Perpustakaan"
+    },
+    {
+      "no": 39,
+      "nama": "Sucira Mojang Dwipa",
+      "gender": "P",
+      "posisiOrganisasi": "Agama"
+    },
+    {
+      "no": 40,
+      "nama": "Sultan Maolana Sidik",
+      "gender": "L",
+      "posisiOrganisasi": "Keamanan"
+    },
+    {
+      "no": 41,
+      "nama": "Syahrul Nugraha",
+      "gender": "L",
+      "posisiOrganisasi": null
+    }
+  ]
 }

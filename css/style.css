@@ -1176,6 +1176,143 @@ body {
 }
 
 /* ============================================
+   PEOPLE PAGE STYLES
+   ============================================ */
+
+.students-view {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.view-toggle {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.view-btn {
+    padding: 0.6rem 1.2rem;
+    border: 2px solid var(--border-color);
+    background: rgba(157, 78, 221, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.view-btn.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--light-accent));
+    color: var(--text-light);
+    border-color: var(--primary-color);
+}
+
+.view-btn:hover {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+.filter-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 0.6rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(157, 78, 221, 0.1);
+    color: var(--text-light);
+}
+
+.filter-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(157, 78, 221, 0.3);
+}
+
+.students-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(157, 78, 221, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.students-table thead {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--text-light);
+}
+
+.students-table th {
+    padding: 1.2rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.students-table td {
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-light);
+}
+
+.students-table tbody tr {
+    transition: all 0.2s ease;
+}
+
+.students-table tbody tr:hover {
+    background: rgba(157, 78, 221, 0.1);
+}
+
+.student-name {
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.gender-badge {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    background: var(--primary-color);
+}
+
+.gender-badge.p {
+    background: var(--light-accent);
+}
+
+.position-badge {
+    background: var(--success-color);
+    color: var(--text-light);
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.position-badge.none {
+    background: var(--border-color);
+    color: var(--text-muted);
+}
+
+.hidden {
+    display: none;
+}
+
+/* ============================================
    RESPONSIVE DESIGN
    ============================================ */
 
