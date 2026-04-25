@@ -8,7 +8,9 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
+<!-- ══════════════════════════════════════════
+     NAVBAR  — teks & logo diinjeksi oleh JS
+     ══════════════════════════════════════════ -->
 <header class="navbar">
   <div class="navbar-container">
     <div class="logo">
@@ -34,77 +36,178 @@
 
 <main>
 
-  <!-- WALI KELAS — diinjeksi JS ke dalam #wali-kelas -->
-  <section class="wali-section">
-    <div class="container">
-      <h2>Wali Kelas</h2>
-      <div id="wali-kelas" class="wali-card"><!-- JS --></div>
+  <!-- HERO — src & teks diinjeksi JS -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="" alt="" class="hero-image">
+      <div class="hero-overlay">
+        <h1 class="hero-headline" translate="no">Our Team</h1>
+        <p class="hero-subheadline">Meet the amazing students of Class VII E</p>
+      </div>
     </div>
   </section>
 
-  <!-- PENGURUS KELAS — seluruh grup dibuat JS dari data.pengurusGroups -->
-  <section class="pengurus-section">
+  <!-- ORGANIZATION SECTION -->
+  <section class="captain">
     <div class="container">
-      <h2>Pengurus Kelas</h2>
-      <div id="pengurus-container"><!-- JS --></div>
+      <h2>Organization Structure</h2>
+      <div id="orgContainer"></div>
     </div>
   </section>
 
-  <!-- ANGGOTA KELAS — siswa tanpa pengurusGroup, dibuat JS -->
+  <!-- STUDENTS SECTION -->
   <section class="students-section">
     <div class="container">
-      <h2>Anggota Kelas</h2>
-      <div class="students-grid" id="students-grid"><!-- JS --></div>
+      <h2>All Students</h2>
+      <div class="students-view">
+        <input
+          type="text"
+          class="filter-input"
+          id="searchInput"
+          placeholder="Search student name..."
+        >
+        <div class="view-toggle">
+          <button class="view-btn active" onclick="switchView('table')">Table</button>
+          <button class="view-btn" onclick="switchView('grid')">Cards</button>
+        </div>
+      </div>
+
+      <div id="tableView" class="table-view">
+        <table class="students-table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Full Name</th>
+              <th>Gender</th>
+              <th>Position</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+
+      <div id="gridView" class="students-grid hidden"></div>
     </div>
   </section>
 
 </main>
 
-<!-- MODAL DETAIL SISWA — kerangka tetap di HTML, data diinjeksi JS -->
-<div class="modal" id="student-modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="modal-body">
-      <img src="" alt="" class="modal-image">
-      <div class="modal-info">
-        <h2 id="modal-name"></h2>
-        <p  id="modal-nickname"></p>
-        <p  id="modal-position"></p>
-        <div class="modal-details">
-          <h3>Biodata</h3>
-          <p><strong>Tanggal Lahir:</strong> <span id="modal-ttl"></span></p>
-          <p><strong>Hobi:</strong>          <span id="modal-hobi"></span></p>
-        </div>
-        <div class="modal-pesan">
-          <h3>Kesan &amp; Pesan</h3>
-          <p id="modal-pesan"></p>
-        </div>
-        <div class="modal-trivia">
-          <h3>Fun Trivia</h3>
-          <ul id="modal-trivia-list"></ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-content">
-      <p><!-- JS --></p>
-      <div class="social-links">
-        <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-      </div>
-    </div>
-    <div class="visitor-counter">
-      <p>Total Visitors: <span id="visitor-count">0</span></p>
-    </div>
+    <p>&copy; 2024 Class VII E Website. All rights reserved.</p>
   </div>
 </footer>
 
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
+<script>
+  let allStudents = [];
+  let muridData = null;
+
+  // Load data from murid.json
+  async function loadData() {
+    try {
+      const response = await fetch('murid.json');
+      muridData = await response.json();
+      allStudents = muridData.students || [];
+
+      renderOrganization();
+      renderStudentsTable();
+      renderStudentsGrid();
+      setupSearch();
+    } catch (error) {
+      console.error('Error loading murid.json:', error);
+      document.querySelector('main').innerHTML = '<p style="text-align: center; color: red; padding: 2rem;">Error loading data. Please ensure murid.json is in the same directory.</p>';
+    }
+  }
+
+  function renderOrganization() {
+    const orgContainer = document.getElementById('orgContainer');
+    // Since murid.json doesn't have organization data, we'll skip this for now
+    // You can add organization data to murid.json or data.json
+    orgContainer.innerHTML = '<p>Organization structure will be displayed here.</p>';
+  }
+
+  function renderStudentsTable() {
+    const tableBody = document.getElementById('tableBody');
+    tableBody.innerHTML = allStudents.map(student => `
+      <tr>
+        <td>${student.no}</td>
+        <td class="student-name">${student.name}</td>
+        <td><span class="gender-badge ${student.gender.toLowerCase()}">${student.gender}</span></td>
+        <td><span class="position-badge">Student</span></td>
+      </tr>
+    `).join('');
+  }
+
+  function renderStudentsGrid() {
+    const gridView = document.getElementById('gridView');
+    gridView.innerHTML = allStudents.map(student => `
+      <div class="student-card">
+        <div class="student-info">
+          <h3>${student.name}</h3>
+          <p>No: ${student.no} | Gender: ${student.gender}</p>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function setupSearch() {
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      const filtered = allStudents.filter(student =>
+        student.name.toLowerCase().includes(query)
+      );
+      renderFilteredTable(filtered);
+      renderFilteredGrid(filtered);
+    });
+  }
+
+  function renderFilteredTable(students) {
+    const tableBody = document.getElementById('tableBody');
+    tableBody.innerHTML = students.map(student => `
+      <tr>
+        <td>${student.no}</td>
+        <td class="student-name">${student.name}</td>
+        <td><span class="gender-badge ${student.gender.toLowerCase()}">${student.gender}</span></td>
+        <td><span class="position-badge">Student</span></td>
+      </tr>
+    `).join('');
+  }
+
+  function renderFilteredGrid(students) {
+    const gridView = document.getElementById('gridView');
+    gridView.innerHTML = students.map(student => `
+      <div class="student-card">
+        <div class="student-info">
+          <h3>${student.name}</h3>
+          <p>No: ${student.no} | Gender: ${student.gender}</p>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function switchView(view) {
+    const tableView = document.getElementById('tableView');
+    const gridView = document.getElementById('gridView');
+    const tableBtn = document.querySelector('.view-btn:nth-child(1)');
+    const gridBtn = document.querySelector('.view-btn:nth-child(2)');
+
+    if (view === 'table') {
+      tableView.classList.remove('hidden');
+      gridView.classList.add('hidden');
+      tableBtn.classList.add('active');
+      gridBtn.classList.remove('active');
+    } else {
+      tableView.classList.add('hidden');
+      gridView.classList.remove('hidden');
+      tableBtn.classList.remove('active');
+      gridBtn.classList.add('active');
+    }
+  }
+
+</script>
+
 </body>
 </html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Organisasi Kelas VII E</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/organisasi.css" />
+  <link rel="stylesheet" href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap)" />
+  <link rel="stylesheet" href="[cdnjs.cloudflare.com](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)" />
+</head>
+<body>
+
+ <!-- ══════════════════════════════════════════
+     NAVBAR  — teks & logo diinjeksi oleh JS
+     ══════════════════════════════════════════ -->
+<header class="navbar">
+  <div class="navbar-container">
+    <div class="logo">
+      <img src="" alt="" class="logo-img">
+      <div class="logo-text">
+        <h1></h1>
+        <p></p>
+      </div>
+    </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="index.html"  class="active">Home</a></li>
+        <li><a href="organisasi.html">Our Team</a></li>
+        <li><a href="gallery.html">Activities</a></li>
+        <li><a href="info.html">Information</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+  <!-- ── HERO ── -->
+  <section class="org-hero">
+    <div class="org-hero-content">
+      <h1 class="org-hero-title">Organisasi Kelas</h1>
+      <p class="org-hero-sub">Struktur kepengurusan & daftar siswa <strong>VII E</strong> — T.A. 2025/2026</p>
+    </div>
+  </section>
+
+  <main class="org-main">
+
+    <!-- ════════════════════════════════
+         BAGAN STRUKTUR ORGANISASI
+    ════════════════════════════════ -->
+    <section class="section-block">
+      <h2 class="section-heading"><i class="fas fa-sitemap"></i> Struktur Organisasi</h2>
+
+      <div class="org-chart">
+
+        <!-- KETUA -->
+        <div class="org-row org-top">
+          <div class="org-card role-ketua" data-nama="Irsyad Dzaky Nurghany">
+            <img src="foto/irsyad.jpg" alt="Irsyad" onerror="this.src='foto/default.jpg'" />
+            <div class="org-info">
+              <span class="org-role">Ketua</span>
+              <span class="org-name">Irsyad</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- VERTICAL CONNECTOR -->
+        <div class="org-connector-v"></div>
+
+        <!-- WAKIL -->
+        <div class="org-row">
+          <div class="org-card role-wakil" data-nama="Rasyad Gibran Anandi">
+            <img src="foto/rasyad.jpg" alt="Rasyad" onerror="this.src='foto/default.jpg'" />
+            <div class="org-info">
+              <span class="org-role">Wakil Ketua</span>
+              <span class="org-name">Rasyad</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HORIZONTAL BRANCH TO SEKRETARIS & BENDAHARA -->
+        <div class="org-connector-v"></div>
+        <div class="org-row org-trio">
+
+          <!-- SEKRETARIS -->
+          <div class="org-branch">
+            <div class="org-branch-label">Sekretaris</div>
+            <div class="org-branch-cards">
+              <div class="org-card role-sekretaris" data-nama="Putri Amira Abdurachman">
+                <img src="foto/putri.jpg" alt="Putri" onerror="this.src='foto/default.jpg'" />
+                <div class="org-info">
+                  <span class="org-role">Sekretaris 1</span>
+                  <span class="org-name">Putri</span>
+                </div>
+              </div>
+              <div class="org-card role-sekretaris" data-nama="R. Adhyas Faeyza Hendra">
+                <img src="foto/adhyas.jpg" alt="Adhyas" onerror="this.src='foto/default.jpg'" />
+                <div class="org-info">
+                  <span class="org-role">Sekretaris 2</span>
+                  <span class="org-name">R. Adhyas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BENDAHARA -->
+          <div class="org-branch">
+            <div class="org-branch-label">Bendahara</div>
+            <div class="org-branch-cards">
+              <div class="org-card role-bendahara" data-nama="Feysha Zaqiyatuzahra">
+                <img src="foto/feysha.jpg" alt="Feysha" onerror="this.src='foto/default.jpg'" />
+                <div class="org-info">
+                  <span class="org-role">Bendahara 1</span>
+                  <span class="org-name">Feysha</span>
+                </div>
+              </div>
+              <div class="org-card role-bendahara" data-nama="RD Ligar Khalifah Ramsyah">
+                <img src="foto/ligar.jpg" alt="Ligar" onerror="this.src='foto/default.jpg'" />
+                <div class="org-info">
+                  <span class="org-role">Bendahara 2</span>
+                  <span class="org-name">Ligar</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SEKSI-SEKSI -->
+        <div class="org-connector-v"></div>
+        <div class="org-seksi-wrapper">
+          <div class="org-seksi-title">Seksi-Seksi</div>
+          <div class="org-seksi-grid">
+
+            <div class="seksi-item">
+              <div class="seksi-label"><i class="fas fa-clipboard-check"></i> Absensi</div>
+              <div class="seksi-names">Farrel & Haura</div>
+            </div>
+            <div class="seksi-item">
+              <div class="seksi-label"><i class="fas fa-book-open"></i> Kurikulum</div>
+              <div class="seksi-names">Sakila & Kenzie</div>
+            </div>
+            <div class="seksi-item">
+              <div class="seksi-label"><i class="fas fa-shield-alt"></i> Keamanan</div>
+              <div class="seksi-names">Cinta & Sultan</div>
+            </div>
+            <div class="seksi-item">
+              <div class="seksi-label"><i class="fas fa-mosque"></i> Agama</div>
+              <div class="seksi-names">Faaiz & Sucira</div>
+            </div>
+            <div class="seksi-item">
+              <div class="seksi-label"><i class="fas fa-book"></i> Perpustakaan</div>
+              <div class="seksi-names">Azam & Silva</div>
+            </div>
+            <div class="seksi-item">
+              <div class="seksi-label"><i class="fas fa-palette"></i> Kesenian</div>
+              <div class="seksi-names">Jesica & Rafka</div>
+            </div>
+            <div class="seksi-item">
+              <div class="seksi-label"><i class="fas fa-running"></i> Olahraga</div>
+              <div class="seksi-names">Arfandi & Alika</div>
+            </div>
+            <div class="seksi-item">
+              <div class="seksi-label"><i class="fas fa-flag"></i> Upacara</div>
+              <div class="seksi-names">Aida & Fernando</div>
+            </div>
+            <div class="seksi-item">
+              <div class="seksi-label"><i class="fas fa-first-aid"></i> PMR</div>
+              <div class="seksi-names">Ryan & Rahma</div>
+            </div>
+            <div class="seksi-item">
+              <div class="seksi-label"><i class="fas fa-campground"></i> Pramuka</div>
+              <div class="seksi-names">Abdurrahman & Felicia</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════
+         DAFTAR SISWA — KARTU
+    ════════════════════════════════ -->
+    <section class="section-block">
+      <h2 class="section-heading"><i class="fas fa-users"></i> Daftar Siswa</h2>
+
+      <!-- Filter -->
+      <div class="filter-bar">
+        <input type="text" id="searchInput" placeholder="🔍  Cari nama siswa..." class="filter-input" />
+        <select id="genderFilter" class="filter-select">
+          <option value="all">Semua</option>
+          <option value="L">Laki-laki</option>
+          <option value="P">Perempuan</option>
+        </select>
+      </div>
+
+      <div class="siswa-grid" id="siswaGrid">
+        <!-- diisi oleh JS -->
+      </div>
+      <p class="siswa-count" id="siswaCount"></p>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <p>© 2025 Kelas VII E · SMP · Semua hak dilindungi</p>
+  </footer>
+
+  <script>
+    // ── Load murid.json dan render kartu ──
+    fetch('murid.json')
+      .then(r => r.json())
+      .then(data => {
+        window._siswa = data.siswa;
+        renderKartu(data.siswa);
+      });
+
+    function renderKartu(list) {
+      const grid = document.getElementById('siswaGrid');
+      const count = document.getElementById('siswaCount');
+      grid.innerHTML = '';
+
+      if (list.length === 0) {
+        grid.innerHTML = '<p class="no-result">Tidak ada siswa yang cocok.</p>';
+        count.textContent = '';
+        return;
+      }
+
+      list.forEach(s => {
+        const badge = getBadgeClass(s.jabatan);
+        const card = document.createElement('div');
+        card.className = 'siswa-card';
+        card.innerHTML = `
+          <div class="siswa-thumb">
+            <img src="${s.foto}" alt="${s.nama}"
+                 onerror="this.src='foto/default.jpg'" />
+            <span class="siswa-no">${String(s.no).padStart(2,'0')}</span>
+          </div>
+          <div class="siswa-body">
+            <h3 class="siswa-nama">${s.nama}</h3>
+            <span class="siswa-jabatan ${badge}">${s.jabatan}</span>
+            <span class="siswa-gender ${s.gender === 'L' ? 'gender-l' : 'gender-p'}">
+              ${s.gender === 'L' ? '♂ Laki-laki' : '♀ Perempuan'}
+            </span>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      count.textContent = `Menampilkan ${list.length} dari ${window._siswa.length} siswa`;
+    }
+
+    function getBadgeClass(jabatan) {
+      if (jabatan === 'Ketua')        return 'badge-ketua';
+      if (jabatan === 'Wakil Ketua')  return 'badge-wakil';
+      if (jabatan.startsWith('Sek'))  return 'badge-sek';
+      if (jabatan.startsWith('Ben'))  return 'badge-ben';
+      return 'badge-anggota';
+    }
+
+    // ── Filter / Search ──
+    function applyFilter() {
+      const q      = document.getElementById('searchInput').value.toLowerCase();
+      const gender = document.getElementById('genderFilter').value;
+      const hasil  = window._siswa.filter(s => {
+        const matchName   = s.nama.toLowerCase().includes(q);
+        const matchGender = gender === 'all' || s.gender === gender;
+        return matchName && matchGender;
+      });
+      renderKartu(hasil);
+    }
+
+    document.getElementById('searchInput').addEventListener('input', applyFilter);
+    document.getElementById('genderFilter').addEventListener('change', applyFilter);
+  </script>
+
+</body>
+</html>
