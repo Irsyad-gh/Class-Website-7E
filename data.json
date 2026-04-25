@@ -1,8 +1,8 @@
 {
   "class": {
-    "name": "7",
+    "name": "7E",
     "subtitle": "Enormous",
-    "school": "SMPN 1 Subang / SPENSA Subang",
+    "school": "Angkatan 2025-2026 | SMP Negeri 1 Subang",
     "year": "2025 - 2026",
     "totalStudents": 43
   },
@@ -47,5 +47,57 @@
         "room": "7E"
       }
     ]
-  }
+  },
+  "logo": "assets/img/icons/logo.jpg",
+  "heroImage": "assets/img/class-cinematic.jpeg",
+  "gallery": [
+    {
+      "image": "assets/img/gallery/class-meeting-1.jpg",
+      "category": "class-meetings",
+      "title": "Lomba Antar Kelas",
+      "description": "Kompetisi Seru"
+    },
+    {
+      "image": "assets/img/gallery/class-meeting-2.jpg",
+      "category": "class-meetings",
+      "title": "Acara Kelas",
+      "description": "Semangat Bersama"
+    },
+    {
+      "image": "assets/img/gallery/study-tour-1.jpg",
+      "category": "study-tour",
+      "title": "Kunjungan Lapangan",
+      "description": "Belajar Sambil Bertualang"
+    },
+    {
+      "image": "assets/img/gallery/study-tour-2.jpg",
+      "category": "study-tour",
+      "title": "Perjalanan Kelas",
+      "description": "Ciptakan Kenangan"
+    },
+    {
+      "image": "assets/img/gallery/daily-1.jpg",
+      "category": "daily-life",
+      "title": "Candid Kelas",
+      "description": "Momen Berharga"
+    },
+    {
+      "image": "assets/img/gallery/daily-2.jpg",
+      "category": "daily-life",
+      "title": "Istirahat Seru",
+      "description": "Canda dan Tawa"
+    }
+  ],
+  "footer": {
+    "copyright": "2026",
+    "team": "Team IT 7E",
+    "instagram": "https://www.instagram.com/7.enormous?igsh=MnJkMG9lbjRobnNk",
+    "tiktok": "#"
+  },
+  "events": [
+    {
+      "name": "Ujian Akhir Semester",
+      "date": "2026-06-15"
+    }
+  ]
 }

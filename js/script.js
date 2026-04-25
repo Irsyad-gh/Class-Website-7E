@@ -35,10 +35,13 @@ document.addEventListener('DOMContentLoaded', async function() {
             appState.data = data;
             applyTheme(data.theme);
             applyGlobalBranding(data);
+            applyHero(data);
+            applyFooter(data);
             applyAboutSection(data.aboutClass);
             applyHomeCaptain(data.teachers?.[0]);
             renderWaliKelas(data.teachers?.[0]);
             renderStudents(data.students || []);
+            renderGallery(data.gallery || []);
             setupSchedule(data.schedule || {});
             setupBirthdayData(data.students || []);
         } else {
@@ -46,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             setupBirthdayData([]);
         }
 
-        initCountdown();
+        initCountdown(data?.events?.[0]);
         initGalleryFilter();
         initPiketSchedule();
         initMbgSchedule();
@@ -78,25 +81,73 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 
     function applyGlobalBranding(data = {}) {
+        const logoImgs = document.querySelectorAll('.logo-img');
         const logoTitle = document.querySelector('.logo-text h1');
         const logoSubtitle = document.querySelector('.logo-text p');
-        const heroHeadline = document.querySelector('.hero-headline');
-        const heroSubheadline = document.querySelector('.hero-subheadline');
 
+        if (logoImgs.length && data.logo) {
+            logoImgs.forEach(img => img.src = data.logo);
+        }
         if (logoTitle && data.class) {
-            logoTitle.textContent = `${data.class.name} ${data.class.subtitle}`.trim();
+            logoTitle.textContent = `${data.class.name}${data.class.subtitle ? ' ' + data.class.subtitle : ''}`.trim();
         }
         if (logoSubtitle && data.class) {
             logoSubtitle.textContent = `${data.class.school} | ${data.class.year}`;
         }
+    }
+
+    function applyHero(data = {}) {
+        const heroImage = document.querySelector('.hero-image');
+        const heroHeadline = document.querySelector('.hero-headline');
+        const heroSubheadline = document.querySelector('.hero-subheadline');
+
+        if (heroImage && data.heroImage) {
+            heroImage.src = data.heroImage;
+        }
         if (heroHeadline && data.class) {
-            heroHeadline.textContent = `Selamat Datang di Rumah ${data.class.name}`;
+            heroHeadline.textContent = `Welcome to the Home of Class ${data.class.name}`;
         }
         if (heroSubheadline && data.class) {
             heroSubheadline.textContent = `${data.class.school} | ${data.class.year}`;
         }
     }
 
+    function applyFooter(data = {}) {
+        const copyrightEl = document.querySelector('.footer-content p');
+        const instagramLink = document.querySelector('.social-links a[href*="instagram"]');
+        const tiktokLink = document.querySelector('.social-links a[href*="tiktok"]');
+
+        if (copyrightEl && data.footer) {
+            copyrightEl.innerHTML = `&copy; ${data.footer.copyright} Made with ❤️ by ${data.footer.team}`;
+        }
+        if (instagramLink && data.footer && data.footer.instagram) {
+            instagramLink.href = data.footer.instagram;
+        }
+        if (tiktokLink && data.footer && data.footer.tiktok) {
+            tiktokLink.href = data.footer.tiktok;
+        }
+    }
+
+    function renderGallery(galleryData = []) {
+        const galleryGrid = document.getElementById('gallery-grid');
+        if (!galleryGrid) return;
+
+        galleryGrid.innerHTML = '';
+
+        galleryData.forEach(item => {
+            const galleryItem = document.createElement('div');
+            galleryItem.className = 'gallery-item';
+            galleryItem.setAttribute('data-category', item.category);
+            galleryItem.innerHTML = `
+                <img src="${item.image}" alt="${item.title}">
+                <div class="gallery-overlay">
+                    <h3>${item.title}</h3>
+                    <p>${item.description}</p>
+                </div>
+            `;
+            galleryGrid.appendChild(galleryItem);
+        });
+    }
     function applyAboutSection(text) {
         const aboutText = document.querySelector('.about-text');
         if (aboutText && text) {
@@ -331,11 +382,11 @@ document.addEventListener('DOMContentLoaded', async function() {
         });
     }
 
-    function initCountdown() {
-        // Uncomment and update targetDate jika ingin menampilkan countdown.
-        /*
+    function initCountdown(event) {
+        if (!event || !event.date) return;
+
         function updateCountdown() {
-            const targetDate = new Date('2026-06-15').getTime();
+            const targetDate = new Date(event.date).getTime();
             const now = Date.now();
             const timeLeft = targetDate - now;
             if (timeLeft <= 0) return;
@@ -351,7 +402,6 @@ document.addEventListener('DOMContentLoaded', async function() {
 
         updateCountdown();
         setInterval(updateCountdown, 1000);
-        */
     }
 
     function initGalleryFilter() {

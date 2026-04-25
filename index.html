@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +42,7 @@
             <div class="hero-content">
                 <img src="assets/img/class-cinematic.jpeg" alt="Class Photo" class="hero-image">
                 <div class="hero-overlay">
-                    <h1 class="hero-headline">Welcome to the Home of Class 7E</h1>
+                    <h1 class="hero-headline" translate="no">Welcome to the Home of Class 7E</h1>
                     <p class="hero-subheadline">Angkatan 2025-2026 | SMP Negeri 1 Subang</p>
                 </div>
             </div>
@@ -57,6 +57,37 @@
                     Kami adalah keluarga besar yang saling mendukung, memiliki semangat tinggi, 
                     dan siap menghadapi setiap tantangan dengan penuh kebersamaan.
                 </p>
+            </div>
+        </section>
+
+        <!-- SCHEDULE SECTION -->
+        <section class="info-section schedule">
+            <div class="container">
+                <h2>Jadwal Pelajaran</h2>
+                <div class="schedule-container">
+                    <div class="day-tabs">
+                        <button class="day-btn active" data-day="senin">Senin</button>
+                        <button class="day-btn" data-day="selasa">Selasa</button>
+                        <button class="day-btn" data-day="rabu">Rabu</button>
+                        <button class="day-btn" data-day="kamis">Kamis</button>
+                        <button class="day-btn" data-day="jumat">Jumat</button>
+                        <button class="day-btn" data-day="sabtu">Sabtu</button>
+                    </div>
+
+                    <table class="schedule-table" id="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Jam</th>
+                                <th>Pelajaran</th>
+                                <th>Guru</th>
+                                <th>Ruangan</th>
+                            </tr>
+                        </thead>
+                        <tbody id="schedule-body">
+                            <!-- Diisi oleh JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
