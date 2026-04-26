@@ -35,9 +35,6 @@
   else if (page === 'info.html')                   renderInfo(data);
   else if (page === 'gallery.html')                renderGallery(data);
 
-  // ── 5. Visitor counter ────────────────────────────────────
-  updateVisitorCount();
-
 
   // ═══════════════════════════════════════════════════════════
   //  TEMA
@@ -72,8 +69,8 @@
     const { footer } = data;
     const copy = qs('.footer-content p');
     if (copy) copy.innerHTML = `&copy; ${footer.copyright} Made with ❤️ by ${footer.team}`;
-    setAttr('.social-links a[title="Instagram"]', 'href', footer.instagram);
-    setAttr('.social-links a[title="TikTok"]',    'href', footer.tiktok);
+    setAttr('.social-links a[title="Instagram"]', 'href', 'https://www.instagram.com/7.enormous?igsh=MnJkMG9lbjRobnNk');
+    setAttr('.social-links a[title="TikTok"]',    'href', footer.tiktok || '#');
   }
 
 
@@ -478,20 +475,6 @@
 
     tick();
     setInterval(tick, 1000);
-  }
-
-
-  // ═══════════════════════════════════════════════════════════
-  //  VISITOR COUNTER
-  // ═══════════════════════════════════════════════════════════
-
-  function updateVisitorCount() {
-    try {
-      const key   = 'visitorCount_7E';
-      const count = parseInt(localStorage.getItem(key) || '0') + 1;
-      localStorage.setItem(key, count);
-      setText('#visitor-count', count.toLocaleString('id-ID'));
-    } catch (_) { /* localStorage mungkin diblokir di mode privat */ }
   }
 
 
