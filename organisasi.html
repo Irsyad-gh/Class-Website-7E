@@ -57,7 +57,7 @@
         <!-- KETUA -->
         <div class="org-row org-top">
           <div class="org-card role-ketua" data-nama="Irsyad Dzaky Nurghany">
-            <img src="foto/irsyad.jpg" alt="Irsyad" onerror="this.src='foto/default.jpg'" />
+            <img src="assets/foto/irsyad.jpg" alt="Irsyad" onerror="this.src='assets/foto/default.jpg'" />
             <div class="org-info">
               <span class="org-role">Ketua</span>
               <span class="org-name">Irsyad</span>
@@ -71,7 +71,7 @@
         <!-- WAKIL -->
         <div class="org-row">
           <div class="org-card role-wakil" data-nama="Rasyad Gibran Anandi">
-            <img src="foto/rasyad.jpg" alt="Rasyad" onerror="this.src='foto/default.jpg'" />
+            <img src="assets/foto/rasyad.jpg" alt="Rasyad" onerror="this.src='assets/foto/default.jpg'" />
             <div class="org-info">
               <span class="org-role">Wakil Ketua</span>
               <span class="org-name">Rasyad</span>
@@ -88,14 +88,14 @@
             <div class="org-branch-label">Sekretaris</div>
             <div class="org-branch-cards">
               <div class="org-card role-sekretaris" data-nama="Putri Amira Abdurachman">
-                <img src="foto/putri.jpg" alt="Putri" onerror="this.src='foto/default.jpg'" />
+                <img src="assets/foto/putri.jpg" alt="Putri" onerror="this.src='assets/foto/default.jpg'" />
                 <div class="org-info">
                   <span class="org-role">Sekretaris 1</span>
                   <span class="org-name">Putri</span>
                 </div>
               </div>
               <div class="org-card role-sekretaris" data-nama="R. Adhyas Faeyza Hendra">
-                <img src="foto/adhyas.jpg" alt="Adhyas" onerror="this.src='foto/default.jpg'" />
+                <img src="assets/foto/adhyas.jpg" alt="Adhyas" onerror="this.src='assets/foto/default.jpg'" />
                 <div class="org-info">
                   <span class="org-role">Sekretaris 2</span>
                   <span class="org-name">R. Adhyas</span>
@@ -109,14 +109,14 @@
             <div class="org-branch-label">Bendahara</div>
             <div class="org-branch-cards">
               <div class="org-card role-bendahara" data-nama="Feysha Zaqiyatuzahra">
-                <img src="foto/feysha.jpg" alt="Feysha" onerror="this.src='foto/default.jpg'" />
+                <img src="assets/foto/feysha.jpg" alt="Feysha" onerror="this.src='assets/foto/default.jpg'" />
                 <div class="org-info">
                   <span class="org-role">Bendahara 1</span>
                   <span class="org-name">Feysha</span>
                 </div>
               </div>
               <div class="org-card role-bendahara" data-nama="RD Ligar Khalifah Ramsyah">
-                <img src="foto/ligar.jpg" alt="Ligar" onerror="this.src='foto/default.jpg'" />
+                <img src="assets/foto/ligar.jpg" alt="Ligar" onerror="this.src='assets/foto/default.jpg'" />
                 <div class="org-info">
                   <span class="org-role">Bendahara 2</span>
                   <span class="org-name">Ligar</span>
@@ -217,8 +217,11 @@
         return r.json();
       })
       .then(data => {
+        // Ambil list siswa dari data
         const list = data.siswa || data.students || [];
+        // Simpan di window untuk filter
         window._siswa = list;
+        // Render kartu siswa
         renderKartu(list);
       })
       .catch(error => {
@@ -230,8 +233,10 @@
       });
 
     function renderKartu(list) {
+      // Cari elemen grid dan count
       const grid = document.getElementById('siswaGrid');
       const count = document.getElementById('siswaCount');
+      // Kosongkan grid
       grid.innerHTML = '';
 
       if (list.length === 0) {
@@ -240,20 +245,23 @@
         return;
       }
 
+      // Loop untuk setiap siswa
       list.forEach(s => {
+        // Ambil data siswa dengan fallback
         const jabatan = s.jabatan || s.position || 'Anggota';
         const badge = getBadgeClass(jabatan);
-        const foto = s.foto || s.photo || 'foto/default.jpg';
+        const foto = s.foto || s.photo || 'assets/foto/default.jpg';
         const nama = s.name || s.nama || 'Nama Siswa';
         const nomor = s.no != null ? String(s.no).padStart(2,'0') : '--';
         const genderClass = s.gender === 'L' ? 'gender-l' : 'gender-p';
         const genderLabel = s.gender === 'L' ? '♂ Laki-laki' : '♀ Perempuan';
+        // Buat elemen kartu
         const card = document.createElement('div');
         card.className = 'siswa-card';
         card.innerHTML = `
           <div class="siswa-thumb">
             <img src="${foto}" alt="${nama}"
-                 onerror="this.src='foto/default.jpg'" />
+                 onerror="this.src='assets/foto/default.jpg'" />
             <span class="siswa-no">${nomor}</span>
           </div>
           <div class="siswa-body">
@@ -264,13 +272,16 @@
             </span>
           </div>
         `;
+        // Tambahkan ke grid
         grid.appendChild(card);
       });
 
+      // Update count
       count.textContent = `Menampilkan ${list.length} dari ${window._siswa.length} siswa`;
     }
 
     function getBadgeClass(jabatan) {
+      // Tentukan class badge berdasarkan jabatan
       if (jabatan === 'Ketua')        return 'badge-ketua';
       if (jabatan === 'Wakil Ketua')  return 'badge-wakil';
       if (jabatan.startsWith('Sek'))  return 'badge-sek';
@@ -281,19 +292,23 @@
     // ── Filter / Search ──
     function applyFilter() {
       if (!window._siswa) return;
+      // Ambil nilai input
       const q      = document.getElementById('searchInput').value.toLowerCase();
       const gender = document.getElementById('genderFilter').value;
+      // Filter siswa
       const hasil  = window._siswa.filter(s => {
         const nama = s.name || s.nama || '';
         const matchName   = nama.toLowerCase().includes(q);
         const matchGender = gender === 'all' || s.gender === gender;
         return matchName && matchGender;
       });
+      // Render hasil filter
       renderKartu(hasil);
     }
 
     // Wait for DOM and data
     document.addEventListener('DOMContentLoaded', () => {
+      // Tambahkan event listener untuk filter
       document.getElementById('searchInput').addEventListener('input', applyFilter);
       document.getElementById('genderFilter').addEventListener('change', applyFilter);
     });

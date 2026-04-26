@@ -143,15 +143,21 @@
   // ═══════════════════════════════════════════════════════════
 
   function renderPeople(data) {
+    // Render informasi wali kelas
     renderWaliKelas(data.teachers[0]);
+    // Render struktur pengurus kelas
     renderPengurusKelas(data);
+    // Render daftar anggota kelas
     renderAnggotaKelas(data.students);
+    // Inisialisasi modal untuk detail siswa
     initStudentModal(data.students);
   }
 
   function renderWaliKelas(teacher) {
+    // Cari elemen container untuk wali kelas
     const el = qs('#wali-kelas');
     if (!el || !teacher) return;
+    // Buat HTML untuk kartu wali kelas dengan gambar, info, dan sosial media
     el.innerHTML = `
       <img src="${teacher.image}" alt="${teacher.name}" class="wali-image"
            onerror="this.src='assets/img/students/student-placeholder.jpg'">
@@ -171,14 +177,18 @@
   }
 
   function renderPengurusKelas(data) {
+    // Cari container untuk pengurus
     const container = qs('#pengurus-container');
     if (!container) return;
 
     let html = '';
+    // Loop melalui setiap grup pengurus
     for (const group of data.pengurusGroups) {
+      // Filter siswa yang termasuk dalam grup ini
       const members = data.students.filter(s => s.pengurusGroup === group.id);
       if (members.length === 0) continue;
 
+      // Buat HTML untuk grup dengan kartu siswa
       html += `
         <div class="pengurus-group">
           <h3 class="group-title">${group.title}</h3>
@@ -188,22 +198,26 @@
         </div>`;
     }
 
+    // Set HTML atau pesan kosong
     container.innerHTML = html || '<p class="empty">Data pengurus belum tersedia.</p>';
   }
 
   function renderAnggotaKelas(students) {
+    // Cari grid untuk anggota kelas
     const grid = qs('#students-grid');
     if (!grid) return;
 
-    // Tampilkan siswa yang bukan pengurus (pengurusGroup === null/undefined)
+    // Filter siswa yang bukan pengurus
     const anggota = students.filter(s => !s.pengurusGroup);
 
+    // Set HTML grid atau pesan kosong
     grid.innerHTML = anggota.length
       ? anggota.map(studentCardHTML).join('')
       : '<p class="empty">Data anggota kelas belum tersedia.</p>';
   }
 
   function studentCardHTML(s) {
+    // Buat HTML untuk kartu siswa dengan gambar dan info
     return `
       <div class="student-card" data-id="${s.id}">
         <img src="${s.image}" alt="${s.name}"
@@ -217,30 +231,33 @@
   }
 
   function initStudentModal(students) {
+    // Cari elemen modal
     const modal = qs('#student-modal');
     if (!modal) return;
 
-    // Buka modal saat klik kartu
+    // Event listener untuk membuka modal saat klik kartu siswa
     document.addEventListener('click', e => {
       const card = e.target.closest('.student-card[data-id]');
       if (card) {
+        // Cari data siswa berdasarkan ID
         const s = students.find(s => s.id == card.dataset.id);
         if (s) openStudentModal(s, modal);
         return;
       }
-      // Tutup modal
+      // Tutup modal jika klik di luar atau tombol close
       if (e.target === modal || e.target.closest('.close')) {
         modal.style.display = 'none';
       }
     });
 
-    // Tutup dengan tombol Escape
+    // Tutup modal dengan tombol Escape
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') modal.style.display = 'none';
     });
   }
 
   function openStudentModal(s, modal) {
+    // Set gambar dan info dasar siswa
     setAttr('.modal-image',      'src', s.image);
     setAttr('.modal-image',      'alt', s.name);
     setText('#modal-name',        s.name);
@@ -250,11 +267,13 @@
     setText('#modal-hobi',        s.hobbies || '-');
     setText('#modal-pesan',       s.message || '-');
 
+    // Set trivia list
     const triviaList = qs('#modal-trivia-list');
     if (triviaList) {
       triviaList.innerHTML = (s.trivia || []).map(t => `<li>${t}</li>`).join('');
     }
 
+    // Tampilkan modal
     modal.style.display = 'flex';
   }
 
