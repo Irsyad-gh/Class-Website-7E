@@ -68,7 +68,7 @@
   function renderFooter(data) {
     const { footer } = data;
     const copy = qs('.footer-content p');
-    if (copy) copy.innerHTML = `&copy; ${footer.copyright} Made with ❤️ by us, ${footer.team}`;
+    if (copy) copy.innerHTML = `&copy; ${footer.copyright} Made by ${footer.team}`;
     setAttr('.social-links a[title="Instagram"]', 'href', 'https://www.instagram.com/7.enormous?igsh=MnJkMG9lbjRobnNk');
     setAttr('.social-links a[title="TikTok"]',    'href', 'https://www.tiktok.com/@seven.enormous');
   }

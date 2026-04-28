@@ -78,19 +78,22 @@
 
   <!-- JADWAL PIKET MBG — baris tabel diinjeksi JS dari data.mbg -->
   <section class="info-section">
-    <div class="container">
-      <h2>Jadwal Piket Pengambilan MBG</h2>
+  <div class="container">
+    <h2>Jadwal Piket Pengambilan MBG</h2>
+    <div class="table-wrapper">
       <table class="mbg-table">
         <thead>
           <tr>
-            <th>Hari</th>
-            <th>Nama Piket</th>
+            <th class="col-hari">Hari</th>
+            <th>Petugas Pengambilan</th>
           </tr>
         </thead>
-        <tbody id="mbg-body"><!-- JS --></tbody>
+        <tbody id="mbg-body"><!-- diisi JS --></tbody>
       </table>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- ULANG TAHUN — kartu diinjeksi JS dari data.students[].birthDate -->
   <section class="info-section">
