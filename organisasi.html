@@ -254,8 +254,14 @@
         const foto = s.foto || s.photo || 'assets/foto/default.jpg';
         const nama = s.name || s.nama || 'Nama Siswa';
         const nomor = s.no != null ? String(s.no).padStart(2,'0') : '--';
-        const genderClass = s.gender === 'L' ? 'gender-l' : 'gender-p';
-        const genderLabel = s.gender === 'L' ? '♂ Laki-laki' : '♀ Perempuan';
+        const genderMap = {
+            'L': { class: 'gender-l', label: '♂ Laki-laki' },
+            'P': { class: 'gender-p', label: '♀ Perempuan' },
+            'S': { class: 'gender-spesial', label: '⚡︎⚡︎ Dewa ⚡︎⚡︎' }
+        };
+        const config = genderMap[s.gender] || { class: 'gender-unknown', label: 'Unknown' };
+        const genderClass = config.class;
+        const genderLabel = config.label;
         const quote = s.quote || '';
         // Buat elemen kartu
         const card = document.createElement('div');

@@ -1444,6 +1444,7 @@ body {
 .siswa-nama {
     font-size: 1rem;
     font-weight: 700;
+    text-align: center;
     color: var(--text-light);
     margin: 0;
     line-height: 1.3;
@@ -1455,6 +1456,7 @@ body {
     border-radius: 999px;
     font-size: 0.72rem;
     font-weight: 700;
+    text-align: center;
 }
 
 .badge-ketua { background: #f59e0b; color: #7c2d12; }
@@ -1465,10 +1467,22 @@ body {
 
 .siswa-gender {
     font-size: 0.78rem;
+    text-align:center;
 }
 
 .gender-l { color: #60a5fa; }
 .gender-p { color: #f472b6; }
+.gender-spesial { color: #FFD700}
+
+.siswa-quote {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted, #ffffff);
+  font-style: italic;
+  margin: 0;
+  line-height: 1.2;
+}
 
 .siswa-quote {
   font-size: 0.7rem;

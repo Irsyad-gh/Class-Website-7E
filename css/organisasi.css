@@ -331,6 +331,7 @@
 .gender-p { color: #db2777; }
 
 .siswa-quote {
+  text-align: center;
   font-size: 0.7rem;
   font-weight: 500;
   color: var(--text-muted, #6b7280);
