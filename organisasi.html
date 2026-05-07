@@ -255,9 +255,18 @@
         const nama = s.name || s.nama || 'Nama Siswa';
         const nomor = s.no != null ? String(s.no).padStart(2,'0') : '--';
         const genderMap = {
-            'L': { class: 'gender-l', label: '♂ Laki-laki' },
-            'P': { class: 'gender-p', label: '♀ Perempuan' },
-            'S': { class: 'gender-spesial', label: '⚡︎⚡︎ Dewa ⚡︎⚡︎' }
+            'L': { class: 'gender-l', label: '♂ Laki-laki ♂' },
+            'P': { class: 'gender-p', label: '♀ Perempuan ♀' },
+            'D': { class: 'gender-d', label: '⚡︎⚡︎ Dewa ⚡︎⚡︎' },
+            'R': { class: 'gender-r', label: '⚙ Robotik ⚙'},
+            'B': { class: 'gender-b', label: '𖢥 Hama 𖢥'},
+            'C': { class: 'gender-c', label: '? Bingung ?'},
+            'LINUX': { class: 'gender-linux', label: '>LINUX<'},
+            'TBC': { class: 'gender-tbc', label: '⚕ TUBERCULOSIS ⚕'},
+            'YAP': { class: 'gender-yap', label: '🗣 Yapping 🗣'},
+            'CALM': { class: 'gender-calm', label: "☕︎ Calm ☕︎"},
+            'DK': { class: 'gender-dk', label: "♆ Raja Iblis ♆"},
+            'ANGEL': { class: 'gender-ang', label: '𓆩Malaikat𓆪'}
         };
         const config = genderMap[s.gender] || { class: 'gender-unknown', label: 'Unknown' };
         const genderClass = config.class;
@@ -300,20 +309,33 @@
 
     // ── Filter / Search ──
     function applyFilter() {
-      if (!window._siswa) return;
-      // Ambil nilai input
-      const q      = document.getElementById('searchInput').value.toLowerCase();
-      const gender = document.getElementById('genderFilter').value;
-      // Filter siswa
-      const hasil  = window._siswa.filter(s => {
-        const nama = s.name || s.nama || '';
-        const matchName   = nama.toLowerCase().includes(q);
-        const matchGender = gender === 'all' || s.gender === gender;
-        return matchName && matchGender;
-      });
-      // Render hasil filter
-      renderKartu(hasil);
-    }
+  if (!window._siswa) return;
+
+  // 1. Ambil nilai input
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  const gender = document.getElementById('genderFilter').value;
+
+  // 2. Pecah input menjadi array berdasarkan titik koma (;)
+  // trim() digunakan untuk menghapus spasi yang tidak sengaja diketik (misal: "Budi ; Andi")
+  const keywords = q.split(';').map(k => k.trim()).filter(Boolean);
+
+  // 3. Filter siswa
+  const hasil = window._siswa.filter(s => {
+    const namaSiswa = (s.name || s.nama || '').toLowerCase();
+    
+    // Logika matchName: 
+    // - Jika input kosong, tampilkan semua (true).
+    // - Jika ada input, cek apakah salah satu keyword ada di dalam namaSiswa.
+    const matchName = keywords.length === 0 || keywords.some(k => namaSiswa.includes(k));
+    
+    const matchGender = gender === 'all' || s.gender === gender;
+
+    return matchName && matchGender;
+  });
+
+  // 4. Render hasil filter
+  renderKartu(hasil);
+}
 
     // Wait for DOM and data
     document.addEventListener('DOMContentLoaded', () => {

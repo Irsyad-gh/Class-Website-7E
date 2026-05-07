@@ -1470,18 +1470,18 @@ body {
     text-align:center;
 }
 
-.gender-l { color: #60a5fa; }
-.gender-p { color: #f472b6; }
-
-.siswa-quote {
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-muted, #ffffff);
-  font-style: italic;
-  margin: 0;
-  line-height: 1.2;
-}
+.gender-l { color: #60a5fa;           }
+.gender-p { color: #f472b6;           }
+.gender-d { color: #FFD700;           }
+.gender-r { color: #00adf1;           }
+.gender-b { color: #654321;           }
+.gender-c { color: var(--text-muted);   }
+.gender-linux {color: #ffc400;        }
+.gender-tbc {color: #33ff00; font-style:oblique}
+.gender-yap {color: #ff0000; font-weight:bold}
+.gender-calm {color: #065f46          }
+.gender-dk {color: #7e0000; font-style:italic; font-weight: bold;}
+.gender-ang {color: #f6ff76  }
 
 .siswa-quote {
   font-size: 0.7rem;
